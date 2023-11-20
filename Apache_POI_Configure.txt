@@ -1,0 +1,14 @@
+Adding external jar files to the Selenium Project in Eclipse
+a.	Apache Poi is already installed in your Practice lab. Refer to QA to QE lab guide for Phase 2 for more information about its directory details.
+b.	Go to Eclipse.
+c.	Right-click on your project.
+d.	Navigate to Build Path 🡪 Configure Build Path.
+e.   e.	Click on the Libraries tab and click on Add External JARs.
+Navigate to the folder where Apache POI jar file is stored.
+g.	Select the executable JAR files from the library folder and click on Open.
+h.	Repeat steps e.
+i.	Select the executable JAR files from the ooxml-lib folder and click on Open.
+j.	Repeat the steps e.
+k.	Select the remaining executable JAR files from the folder and click on Open.
+l.	The following snapshot shows that all the JARs are included in the Library list.
+m.	Click on Apply and then on the OK button.
