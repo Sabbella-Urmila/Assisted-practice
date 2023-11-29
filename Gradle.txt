@@ -1,0 +1,31 @@
+Create a Gradle project
+Press Next button
+Press Next button and give a name to the project and click on Finish
+After Finish, it will create 2 projects 
+We have to fix the issue of lib folder should be inside the main gradle project
+So go to properties of your gradle project and get the path of the project created on your local machine
+Copy the location of project on your local machine:
+Open the folder in your local machine by pasting the path of workspace:
+Now the project is open in your local machine
+Go inside the lib folder
+Select All the items in the lib folder and press CTL X (cut them)
+Now go back to your gradle project directory and paste the contents of lib folder.
+It may ask for replace the files in the destination. 
+Select the option of Replace files in the destination
+After this if you will go to lib folder, it will be empty:
+Delete the Lib folder from gradle folder directory
+Now go to eclipse and delete the gradle project and lib project
+Press OK
+Delete the lib folder
+The gradle project are not there in eclipse but they are present in our local system
+We need to import them to eclipse
+Click on File in eclipse 
+click on Import
+Select Gradle importing Exisitng gradle project
+Press next
+Press next
+Click on browse button and go to the workspace path >> go to your project folder
+You will have the path of your project populated automatically	
+Press Next and Again press next and click on finish
+
+ 

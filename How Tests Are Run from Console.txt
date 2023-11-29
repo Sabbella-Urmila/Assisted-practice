@@ -1,0 +1,14 @@
+Decide the class on your maven project to be executed via the command line
+Right click on the java  class fileGo to Properties  copy the path of the file location
+Open the command prompt in your laptop and copy the path but remove the filename at the end
+Like this cd C:\Users\nandu\Workspace2-git\ATE-Phase2-Junit\src\test\java\com\app\junitDemo
+We also need the path of Junit Jar file on your project. We need to get that path from eclipse project
+Right click on mavane depency folder > right click on junit jar and go to properties
+Go to java source attachment and copt the path as show below
+For me it is:
+C:/Users/nandu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0-M1/junit-jupiter-api-5.10.0-M1-sources.jar
+Execute below command on your command line now:
+# javac -cp C:/Users/nandu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0-M1/junit-jupiter-api-5.10.0-M1-sources.jar;. TestAnnotation.java
+You will get error, ignore them
+# java -cp C:/Users/nandu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0-M1/junit-jupiter-api-5.10.0-M1-sources.jar TestAnnotation.java
+You will get error. Submit the same
