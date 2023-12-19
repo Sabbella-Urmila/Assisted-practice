@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "677bafda-4071-4299-a6ee-5c4ad35298ac",
+		"name": "demowebsite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31715033"
+	},
+	"item": [
+		{
+			"name": "demowebsite",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":5,\n\"email\": \"charles.morris@regres.in\",\n\"first_name\": \"Charles\",\n\"last_name\": \"Morris\",\n\"avatar\": \"https://regres.in/img/faces/5-image.jpg\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/demowebsite",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"demowebsite"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"id\":5,\n\"email\": \"charles.morris@regres.in\",\n\"first_name\": \"Charles\",\n\"last_name\": \"Morris\",\n\"avatar\": \"https://regres.in/img/faces/5-image.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/demowebsite",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"demowebsite"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n\t\"id\": 6,\n\t\"email\": \"tracy.mogins.@regres.in\",\n\t\"first_name\": \"Tracy\",\n\t\"last_name\": \"Mogins\",\n\t\"avatar\": \"https://regres.in/img/faces/6-image.jpg\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://af69694a-3073-4a9b-a819-ced51d039392.mock.pstmn.io"
+		}
+	]
+}

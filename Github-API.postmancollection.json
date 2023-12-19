@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "ab525966-148c-485c-908d-67af9128e1bf",
+		"name": "Github-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31715033"
+	},
+	"item": [
+		{
+			"name": "GetAllRepo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Check if the response status code is 200 ok\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    \r",
+							"    pm.response.to.have.status(200);\r",
+							"\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body contains 'Sabbella-Urmila\",function(){\r",
+							"\r",
+							"    pm.expect(pm.response.text()).to.include(\"Sabbella-Urmila\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Sabbella-Urmila\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"Sabbella-Urmila\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/user/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSpecific_Repos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code should be 200\", function(){\r",
+							"\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function(){\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type should be application/json\", function(){\r",
+							"\r",
+							"    pm.response.to.have.header(\"Content-Type\",\"application/json; charset=utf-8\");\r",
+							"\r",
+							"\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is valid JSON\", function(){\r",
+							"\r",
+							"    pm.response.to.be.json;\r",
+							"\r",
+							"\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Check specific field existence\", function(){\r",
+							"\r",
+							"   pm.expect(pm.response.json()).to.have.property(\"id\");\r",
+							"   pm.expect(pm.response.json()).to.have.property(\"node_id\");\r",
+							"   pm.expect(pm.response.json()).to.have.property(\"full_name\");\r",
+							"   pm.expect(pm.response.json()).to.have.property(\"private\");\r",
+							"   \r",
+							"\r",
+							"});\r",
+							"\r",
+							"//How to fetch json response in variable\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"resData = JSON.parse(responseBody);\r",
+							"\r",
+							"console.log(resData.id);\r",
+							"console.log(resData.node_id);\r",
+							"console.log(resData.name);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/repos/:owner/:repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						":owner",
+						":repos"
+					],
+					"variable": [
+						{
+							"key": "owner",
+							"value": "Sabbella-Urmila"
+						},
+						{
+							"key": "repos",
+							"value": "Assisted-Pratice"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
